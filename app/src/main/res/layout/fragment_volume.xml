@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,10 +8,317 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Volume"
-        android:textSize="40dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audrey"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/teal_200"
+        />
+
+    // Volume Balok
+    <TextView
+        android:id="@+id/Balok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Balok"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/panjangText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Panjang : "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/panjangBalok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="90dp"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Panjang"
+        />
+
+    <TextView
+        android:id="@+id/lebarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="130dp"
+        android:text="Lebar : "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/lebarBalok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="120dp"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Lebar"
+        />
+
+    <TextView
+        android:id="@+id/tinggiBalokText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="160dp"
+        android:text="Tinggi : "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/tinggiBalok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="150dp"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Tinggi"
+        />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="90dp"
+        android:background="@color/black"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="260dp"
+    />
+
+    <TextView
+        android:id="@+id/volumeBalokText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="110dp"
+        android:text="Volume : "
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/volumeBalok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="110dp"
+        android:text="0"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/hitungBalok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="130dp"
+        android:text="Hitung"
+        />
+
+    // Volume Piramid
+    <TextView
+        android:id="@+id/Piramid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="230dp"
+        android:text="Piramid"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/sisiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="270dp"
+        android:text="Sisi :  "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/sisiPiramid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="260dp"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Sisi"
+        />
+
+    <TextView
+        android:id="@+id/tinggiPiramidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="300dp"
+        android:text="Tinggi : "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/tinggiPiramid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="290dp"
+        android:ems="8"
+        android:hint="Masukkan Tinggi"
+        android:inputType="number"
+        android:textSize="15dp"
+        />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="260dp"
+        />
+
+    <TextView
+        android:id="@+id/volumePiramidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="270dp"
+        android:text="Volume : "
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/volumePiramid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="270dp"
+        android:text="0"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/hitungPiramid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="290dp"
+        android:text="Hitung"
+        />
 
 
-</FrameLayout>
+    //80
+    // Volume Tabung
+    <TextView
+        android:id="@+id/Tabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="370dp"
+        android:text="Tabung"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/radiusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="410dp"
+        android:text="Radius :  "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/radiusTabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="400dp"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Radius"
+        />
+
+    <TextView
+        android:id="@+id/tinggiTabungText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="440dp"
+        android:text="Tinggi : "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/tinggiTabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="430dp"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Tinggi"
+        />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="260dp"
+        />
+
+    <TextView
+        android:id="@+id/volumeTabungText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="410dp"
+        android:text="Volume : "
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/volumeTabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="410dp"
+        android:text="0"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/hitungTabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="430dp"
+        android:text="Hitung"
+        />
+</RelativeLayout>

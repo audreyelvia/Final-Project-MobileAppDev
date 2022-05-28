@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -56,7 +57,9 @@ public class Register extends AppCompatActivity {
             }else {
                 firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(Register.this, task -> {
                     if(!task.isSuccessful()){
-                        Toast.makeText(this, "Register failed! Try again", Toast.LENGTH_SHORT).show();
+                        String s = "Register Failed" + task.getException();
+                        Toast.makeText(Register.this, s,
+                                Toast.LENGTH_SHORT).show();
                     }else {
                         Toast.makeText(this, "Register Success!!", Toast.LENGTH_SHORT).show();
                         userReference = firebaseDatabase.getReference().child("murid").child(Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid());

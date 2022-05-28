@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,9 +7,230 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Area"
-        android:textSize="40dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audrey"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/purple_200"
+        />
 
-</FrameLayout>
+
+    // Luas Persegi
+    <TextView
+        android:id="@+id/Persegi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:text="Persegi "
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/sisiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:text="Sisi : "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/sisiPersegi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="90dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Sisi"
+        />
+
+
+    <TextView
+        android:id="@+id/areaPersegiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="130dp"
+        android:text="Area : "
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/areaPersegi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="130dp"
+        android:text="Area Persegi"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/hitungPersegi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="160dp"
+        android:text="Hitung"
+        />
+
+
+    //Luas Segitiga
+    <TextView
+        android:id="@+id/Segitiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="210dp"
+        android:text="Segitiga"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/alasText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:text="Alas :"
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/alasSegitiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="240dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Alas"
+        />
+
+    <TextView
+        android:id="@+id/tinggiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="280dp"
+        android:text="Tinggi :"
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/tinggiSegitiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="270dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Tinggi"
+        />
+
+
+    <TextView
+        android:id="@+id/areaSegitigaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="310dp"
+        android:text="Area : "
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/areaSegitiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="310dp"
+        android:text="Area Segitiga"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/hitungSegitiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="340dp"
+        android:text="Hitung"
+        />
+
+    // Luas Lingkaran
+    <TextView
+        android:id="@+id/lingkaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
+        android:text="Lingkaran"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/ruasText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="430dp"
+        android:text="Ruas : "
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/ruasLingkaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="420dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:hint="Masukkan Ruas"
+        />
+
+
+    <TextView
+        android:id="@+id/areaLingkaranText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="460dp"
+        android:text="Area : "
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/areaLingkaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop= "460dp"
+        android:text="Area Lingkaran"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15dp"
+        />
+
+    <Button
+        android:id="@+id/hitungLingkaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="490dp"
+        android:text="Hitung"
+        />
+</RelativeLayout>

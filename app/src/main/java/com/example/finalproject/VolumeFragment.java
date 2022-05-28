@@ -2,57 +2,88 @@ package com.example.finalproject;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link VolumeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class VolumeFragment extends Fragment {
+    EditText panjangBalok, lebarBalok, tinggiBalok, sisiPiramid, tinggiPiramid, radiusTabung, tinggiTabung;
+    TextView  volumeBalok, volumePiramid, volumeTabung;
+    Button hitungBalok, hitungPiramid, hitungTabung;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public VolumeFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment VolumeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static VolumeFragment newInstance(String param1, String param2) {
-        VolumeFragment fragment = new VolumeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        setContentView(R.layout.fragment_volume);
+        panjangBalok = (EditText) getView().findViewById(R.id.panjangBalok);
+        lebarBalok = (EditText) getView().findViewById(R.id.lebarBalok);
+        tinggiBalok = (EditText) getView().findViewById(R.id.tinggiBalok);
+        sisiPiramid = (EditText) getView().findViewById(R.id.sisiPiramid);
+        tinggiPiramid = (EditText) getView().findViewById(R.id.tinggiPiramid);
+        radiusTabung = (EditText) getView().findViewById(R.id.radiusTabung);
+        tinggiTabung = (EditText) getView().findViewById(R.id.tinggiTabung);
+        volumeBalok = (TextView) getView().findViewById(R.id.volumeBalok);
+        volumePiramid = (TextView) getView().findViewById(R.id.volumePiramid);
+        volumeTabung = (TextView) getView().findViewById(R.id.volumeTabung);
+        hitungBalok = (Button) getView().findViewById(R.id.hitungBalok);
+        hitungPiramid= (Button) getView().findViewById(R.id.hitungPiramid);
+        hitungTabung = (Button) getView().findViewById(R.id.hitungTabung);
+
+        hitungBalok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculateBalok();
+            }
+        });
+
+        hitungPiramid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculatePiramid();
+            }
+        });
+
+        hitungTabung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculateTabung();
+            }
+        });
+
+    }
+
+    public void calculateBalok() {
+        Integer panjang = Integer.parseInt(panjangBalok.getText().toString());
+        Integer lebar = Integer.parseInt(lebarBalok.getText().toString());
+        Integer tinggi = Integer.parseInt(tinggiBalok.getText().toString());
+        Integer hasilBalok = panjang*lebar*tinggi;
+        volumeBalok.setText(hasilBalok.toString());
+    }
+
+    public void calculatePiramid() {
+        Integer sisi = Integer.parseInt(sisiPiramid.getText().toString());
+        Integer tinggi = Integer.parseInt(tinggiPiramid.getText().toString());
+        Double hasilPiramid = 0.33*sisi*sisi*tinggi;
+        volumePiramid.setText(hasilPiramid.toString().format("%.2f", hasilPiramid));
+    }
+
+    public void calculateTabung() {
+        Integer radius = Integer.parseInt(radiusTabung.getText().toString());
+        Integer tinggi = Integer.parseInt(tinggiTabung.getText().toString());
+        Double hasilTabung = 3.14*radius*radius*tinggi;
+        volumeTabung.setText(hasilTabung.toString().format("%.2f", hasilTabung));
+    }
+
+
+    private void setContentView(int fragment_volume) {
     }
 
     @Override
